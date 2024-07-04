@@ -1,0 +1,331 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>clwn</title>
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet" />
+        <link href="src/output.css" rel="stylesheet" />
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <style>
+        /* Custom style for pagination dots */
+        .swiper-pagination-bullet {
+            background-color: white;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: red;
+        }
+        .swiper-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+        .swiper-pagination {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+            .group:hover .overlay {
+            opacity: 1;
+        }
+            .blur-effect {
+            position: relative;
+            z-index: 1;
+            height: 50px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+            filter: blur(10px);
+            margin-top: -25px;
+        }
+        .blur-container {
+            position: relative;
+            z-index: 2;
+            margin-top: -25px;
+        }
+        </style>
+    </head>
+    <body class="bg-blue font-poppins">
+        <nav class="bg-white bg-opacity-5 shadow-md rounded-xl mx-4 mt-4 p-2">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4 pl-6">
+            <div class="text-2xl font-bold text-white">clwn</div>
+            </div>
+            <div>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="510" height="511" fill="none" viewBox="0 0 510 511" id="menu" class="w-7 h-7"><path fill="#E4E4E4" fill-rule="evenodd" d="M156 181H356V166H156V181zM228.983 256.352L355.999 256 355.957 241 228.941 241.352 228.983 256.352zM155.996 331H355.996V316H155.996V331z" clip-rule="evenodd"></path></svg></a>
+            </div>
+        </div> 
+        </nav>
+        <!-- Hero Section -->
+        <section class="mt-12"> 
+            <div class="text-center mx-4 mt-12">
+                <p class="text-slate-400 font-light">Need A Website?</p>
+                <h1 class="text-[40px] sm:text-[53px] text-white font-extrabold">WE ARE THE <span class="text-reds">RIGHT CHOICE</span> FOR YOU</h1>
+                <p class="font-light text-slate-400 mt-8">We Build your website like Bandung Bondowoso built a temple for Roro Jonggrang.</p>
+                <button class="bg-reds hover:bg-red-800 text-white font-bold py-2 px-4 rounded-[8px] mt-8">Contact Us!</button>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- Service and Testimonials Section -->
+        <section class="mt-32 bg-slate-800 pb-[111px]">
+            <div class="text-center pt-28 mx-4 px-7">
+                <h2 class="text-white font-light text-sm tracking-widest">OUR SERVICES</h2>
+                <h1 class="text-white text-lg font-semibold mt-6">We provide <span class="text-reds">great services</span> for our customers based on needs</h1>
+            </div>
+            <!-- Swiper Container -->
+            <div class="swiper-container mt-[81px]">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
+                    <img class="w-24 mx-auto" src="dist/asset/Designer-rafiki.png" alt="Graphic Design" style="padding-top: 40px;">
+                    <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Graphic Design</h2>
+                    <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
+                    <!-- Learn More button -->
+                    <div class="flex justify-center mt-[30px] mb-4">
+                        <button class="flex items-center bg-transparent">
+                            <span class="text-white font-bold text-xs">Learn More</span>
+                            <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
+                    <img class="w-24 mx-auto" src="dist/asset/Programming-rafiki.png" alt="Graphic Design" style="padding-top: 40px;">
+                    <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Web Development</h2>
+                    <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
+                    <!-- Learn More button -->
+                    <div class="flex justify-center mt-[30px] mb-4">
+                        <button class="flex items-center bg-transparent">
+                            <span class="text-white font-bold text-xs">Learn More</span>
+                            <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
+                    <img class="w-24 mx-auto" src="dist/asset/writer.png" alt="Graphic Design" style="padding-top: 40px;">
+                    <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Content Writing</h2>
+                    <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
+                    <!-- Learn More button -->
+                    <div class="flex justify-center mt-[30px] mb-4">
+                        <button class="flex items-center bg-transparent">
+                            <span class="text-white font-bold text-xs">Learn More</span>
+                            <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Testimonials Section Start -->
+            <div class="mt-28 flex items-center justify-center">
+                <div class="container mx-auto px-7">
+                    <div class="flex justify-center">
+                        <div class="flex items-start"> 
+                            <!-- Image Confused -->
+                            <img src="dist/asset/confused.jpg" class="w-20 h-20 rounded-full mr-[18px]" alt="Gambar Confused">
+                            <!-- Container for Stars and paragraph -->
+                            <div class="flex flex-col mt-[-5px]">
+                                <img src="dist/asset/Stars.png" class="w-24 h-4" alt="Gambar Stars">
+                                <p class="text-base text-white leading-4 mt-4 tracking-[-0.5px]">
+                                    "<span id="typing-text">I Swear I Said Nothing...</span>"
+                                </p>
+                                <p class="text-white text-left text-xs pt-2">Lil' Nibba - <span class="text-slate-400">a random confused guy</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonials Section End -->
+        </section>
+        <!-- Service and Testimonials Section End -->
+
+        <!-- Section Choose Us -->
+        <section class="bg-slate-700 pb-[111px]">
+        <div class="container pt-28 mx-auto text-center px-7">
+            <h2 class="text-white font-light text-sm tracking-widest">WHY CHOOSE US</h2>
+            <p class="text-white text-lg font-semibold mt-6">People choose us because we serve <span class="text-reds">the best</span> for everyone</p>
+        </div>
+        <div class="px-7 pt-28 flex items-start">
+            <object type="image/svg+xml" data="dist/asset/Icon.svg" class="w-16 h-16"></object>
+            <div class="ml-4 flex flex-col justify-start">
+            <p class="font-semibold text-base text-white mb-4">Dedicated Project Manager</p>
+            <p class="font-light text-xs text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. At pariatur assumenda dolorem perspiciatis blanditiis ratione.</p>
+            </div>
+        </div>
+        <div class="px-7 pt-8 flex items-start">
+            <object type="image/svg+xml" data="dist/asset/chat.svg" class="w-16 h-16"></object>
+            <div class="ml-4 flex flex-col justify-start">
+            <p class="font-semibold text-base text-white mb-4">Easy Feedback Sharing</p>
+            <p class="font-light text-xs text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. At pariatur assumenda dolorem perspiciatis blanditiis ratione.</p>
+            </div>
+        </div>
+        <div class="px-7 pt-8 flex items-start">
+            <object type="image/svg+xml" data="dist/asset/layers.svg" class="w-16 h-16"></object>
+            <div class="ml-4 flex flex-col justify-start">
+            <p class="font-semibold text-base text-white mb-4">Organized Tasks</p>
+            <p class="font-light text-xs text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. At pariatur assumenda dolorem perspiciatis blanditiis ratione.</p>
+            </div>
+        </div>
+        <div class="px-7 pt-8 flex items-start">
+            <object type="image/svg+xml" data="dist/asset/idk.svg" class="w-16 h-16"></object>
+            <div class="ml-4 flex flex-col justify-start">
+            <p class="font-semibold text-base text-white mb-4">Never Miss Deadline</p>
+            <p class="font-light text-xs text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. At pariatur assumenda dolorem perspiciatis blanditiis ratione.</p>
+            </div>
+        </div>
+        <div class="svg-line flex justify-center mt-16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="1" viewBox="0 0 543.5 2" fill="none">
+            <path d="M1.17105 1H542.5" stroke="#E7E9ED" stroke-linecap="square"/>
+            </svg>
+        </div>
+        <div class="text-center mt-16 px-7">
+            <p class="text-lg font-semibold text-white">Ready to launch your next project?</p>
+            <p class="text-sm font-light text-slate-300 mt-4">Don't hesitate to consult your issues with us; We shall never deny a client, even the most ridiculous request.</p>
+            <button class="bg-reds hover:bg-red-800 text-white font-bold py-2 px-4 rounded-[8px] mt-8">Contact Us!</button>
+        </div>
+        </section>
+        <!-- Section Choose Us End -->
+
+        <!-- Case Studies Section -->
+        <section class="bg-slate-600 pb-[111px]">
+        <div class="container pt-28 mx-auto text-center px-7">
+            <h2 class="text-white font-light text-sm tracking-widest">CASE STUDIES</h2>
+            <p class="text-white text-lg font-semibold mt-6">Our work shows you why we're the <span class="text-reds">right choice</span> for you.</p>
+        </div>
+        <div class="container mx-auto px-7 pt-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 justify-items-center">
+            <!-- Card 1 -->
+            <div class="text-center">
+            <div class="relative group">
+                <img src="dist/asset/graphic-design.png" alt="Graphic Design" class="w-48 rounded-md mx-auto">
+                <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                <span class="text-white text-sm">See Full Image</span>
+                </div>
+            </div>
+            <div class="pt-1">
+                <p class="text-slate-300 text-[10px] font-extralight mt-2">Graphic Design</p> 
+                <p class="text-white text-[13px] font-bold pt-1">Branding Design</p>
+            </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="text-center">
+            <div class="relative group">
+                <img src="dist/asset/graphicdesign.png" alt="Graphic Design" class="w-48 rounded-md mx-auto">
+                <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                <span class="text-white text-sm">See Full Image</span>
+                </div>
+            </div>
+            <div class="pt-1"> 
+                <p class="text-slate-300 text-[10px] font-extralight mt-2">Graphic Design</p> 
+                <p class="text-white text-[13px] font-bold pt-1">Snack Packaging</p>
+            </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="text-center">
+            <div class="relative group">
+                <img src="dist/asset/websdev.png" alt="Web Development" class="w-48 rounded-md mx-auto">
+                <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                <span class="text-white text-sm">See Full Image</span>
+                </div>
+            </div>
+            <div class="pt-1"> 
+                <p class="text-slate-300 text-[10px] font-extralight mt-2">Web Development</p>
+                <p class="text-white text-[13px] font-bold pt-1">Gradient Web Development</p>
+            </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="text-center">
+            <div class="relative group">
+                <img src="dist/asset/content-writing.png" alt="Content Writing" class="w-48 rounded-md mx-auto">
+                <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                <span class="text-white text-sm">See Full Image</span>
+                </div>
+            </div>
+            <div class="pt-1"> 
+                <p class="text-slate-300 text-[10px] font-extralight mt-2">Content Writing</p>
+                <p class="text-white text-[13px] font-bold pt-1">Magazine Content Writing</p>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!-- Case Studies Section End -->
+
+        <!-- Blur Effect -->
+        <div class="blur-effect"></div>
+
+        <!-- New Section Start -->
+        <section class="bg-blue py-10 blur-container">
+            <div class="container mx-auto text-center">
+        <div class="mt-11 px-7">
+            <p class="text-lg font-semibold text-white">Ready to launch your next project?</p>
+            <p class="text-sm font-light text-slate-300 mt-4">Don't hesitate to consult your issues with us; We shall never deny a client, even the most ridiculous request.</p>
+            <button class="bg-reds hover:bg-red-800 text-white font-bold py-2 px-4 rounded-[8px] mt-8">Contact Us!</button>
+        </div>
+            </div>
+            <div class="svg-line flex justify-center mt-16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="1" viewBox="0 0 543.5 2" fill="none">
+            <path d="M1.17105 1H542.5" stroke="#E7E9ED" stroke-linecap="square"/>
+            </svg>
+        </div>
+        <div class="mx-auto text-center mt-16">
+            <h1 class="text-white text-2xl font-bold">clwn</h1>
+            <ul class="mt-8 text-center text-white text-base ">
+                <li class="mb-3"><a href="" class="hover:text-reds">Contact us!</a></li>
+                <li class="mb-3"><a href="" class="hover:text-reds">Pricing</a></li>
+                <li class="mb-3"><a href="" class="hover:text-reds">Services</a></li>
+                <li class="mb-3"><a href="" class="hover:text-reds">Choose Us</a></li>
+                <li class="mb-3"><a href="" class="hover:text-reds">Case Studies</a></li>
+            </ul>
+            <div class="svg-line flex justify-center mt-16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="1" viewBox="0 0 543.5 2" fill="none">
+            <path d="M1.17105 1H542.5" stroke="#E7E9ED" stroke-linecap="square"/>
+            </svg>
+        </div>
+    <div class="mx-auto text-center mt-12">
+    <p class="text-white text-sm">2024 clwn, Inc. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 mt-4">
+        <!-- Instagram SVG -->
+        <a href="https://www.instagram.com/mk.alzdn/" class="block">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram" class="fill-current text-white hover:text-reds h-6 w-6">
+            <path d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z"></path>
+        </svg>
+        </a>
+        <!-- WhatsApp SVG -->
+        <a href="https://whatsapp.com" class="block">
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="whatsapp" class="fill-current text-white hover:text-reds h-6 w-6">
+            <path d="M16.6 14c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.2-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.1.1-.3 0-.4-.1-.1-.6-1.3-.8-1.8-.1-.7-.3-.7-.5-.7h-.5c-.2 0-.5.2-.6.3-.6.6-.9 1.3-.9 2.1.1.9.4 1.8 1 2.6 1.1 1.6 2.5 2.9 4.2 3.7.5.2.9.4 1.4.5.5.2 1 .2 1.6.1.7-.1 1.3-.6 1.7-1.2.2-.4.2-.8.1-1.2l-.4-.2m2.5-9.1C15.2 1 8.9 1 5 4.9c-3.2 3.2-3.8 8.1-1.6 12L2 22l5.3-1.4c1.5.8 3.1 1.2 4.7 1.2 5.5 0 9.9-4.4 9.9-9.9.1-2.6-1-5.1-2.8-7m-2.7 14c-1.3.8-2.8 1.3-4.4 1.3-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3c-2.4-4-1.2-9 2.7-11.5S16.6 3.7 19 7.5c2.4 3.9 1.3 9-2.6 11.4"></path>
+        </svg>
+        </a>
+        <!-- LinkedIn SVG -->
+        <a href="https://linkedin.com" class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="linkedin" class="fill-current text-white hover:text-reds h-6 w-6"><path d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"></path></svg>
+        </a>
+    </div>
+    </div>
+        </div>
+        </section>
+        <!-- New Section End -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    </body>
+    </html>
+
