@@ -26,6 +26,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            overflow: hidden; /* Prevent overflow */
         }
         .swiper-slide {
             display: flex;
@@ -76,87 +77,87 @@
         </section>
         <!-- Hero Section End -->
 
-        <!-- Service and Testimonials Section -->
-        <section class="mt-32 bg-slate-800 pb-[111px]">
-            <div class="text-center pt-28 mx-4 px-7">
-                <h2 class="text-white font-light text-sm tracking-widest">OUR SERVICES</h2>
-                <h1 class="text-white text-lg font-semibold mt-6">We provide <span class="text-reds">great services</span> for our customers based on needs</h1>
-            </div>
-            <!-- Swiper Container -->
-            <div class="swiper-container mt-[81px]">
+    <!-- Service and Testimonials Section -->
+    <section class="mt-32 bg-slate-800 pb-[111px]">
+        <div class="text-center pt-28 mx-4 px-7">
+            <h2 class="text-white font-light text-sm tracking-widest">OUR SERVICES</h2>
+            <h1 class="text-white text-lg font-semibold mt-6">We provide <span class="text-reds">great services</span> for our customers based on needs</h1>
+        </div>
+        <!-- Swiper Container -->
+        <div class="swiper-container mt-[81px]">
             <div class="swiper-wrapper">
                 <!-- Card 1 -->
                 <div class="swiper-slide">
-                <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
-                    <img class="w-24 mx-auto" src="dist/asset/Designer-rafiki.png" alt="Graphic Design" style="padding-top: 40px;">
-                    <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Graphic Design</h2>
-                    <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
-                    <!-- Learn More button -->
-                    <div class="flex justify-center mt-[30px] mb-4">
-                        <button class="flex items-center bg-transparent">
-                            <span class="text-white font-bold text-xs">Learn More</span>
-                            <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
-                        </button>
+                    <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
+                        <img class="w-24 mx-auto" src="dist/asset/Designer-rafiki.png" alt="Graphic Design" style="padding-top: 40px;">
+                        <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Graphic Design</h2>
+                        <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
+                        <!-- Learn More button -->
+                        <div class="flex justify-center mt-[30px] mb-4">
+                            <button class="flex items-center bg-transparent">
+                                <span class="text-white font-bold text-xs">Learn More</span>
+                                <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
+                            </button>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="swiper-slide">
-                <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
-                    <img class="w-24 mx-auto" src="dist/asset/Programming-rafiki.png" alt="Graphic Design" style="padding-top: 40px;">
-                    <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Web Development</h2>
-                    <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
-                    <!-- Learn More button -->
-                    <div class="flex justify-center mt-[30px] mb-4">
-                        <button class="flex items-center bg-transparent">
-                            <span class="text-white font-bold text-xs">Learn More</span>
-                            <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
-                        </button>
+                    <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
+                        <img class="w-24 mx-auto" src="dist/asset/Programming-rafiki.png" alt="Web Development" style="padding-top: 40px;">
+                        <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Web Development</h2>
+                        <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
+                        <!-- Learn More button -->
+                        <div class="flex justify-center mt-[30px] mb-4">
+                            <button class="flex items-center bg-transparent">
+                                <span class="text-white font-bold text-xs">Learn More</span>
+                                <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
+                            </button>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="swiper-slide">
-                <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
-                    <img class="w-24 mx-auto" src="dist/asset/writer.png" alt="Graphic Design" style="padding-top: 40px;">
-                    <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Content Writing</h2>
-                    <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
-                    <!-- Learn More button -->
-                    <div class="flex justify-center mt-[30px] mb-4">
-                        <button class="flex items-center bg-transparent">
-                            <span class="text-white font-bold text-xs">Learn More</span>
-                            <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
-                        </button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            </div>
-
-            <!-- Testimonials Section Start -->
-            <div class="mt-28 flex items-center justify-center">
-                <div class="container mx-auto px-7">
-                    <div class="flex justify-center">
-                        <div class="flex items-start"> 
-                            <!-- Image Confused -->
-                            <img src="dist/asset/confused.jpg" class="w-20 h-20 rounded-full mr-[18px]" alt="Gambar Confused">
-                            <!-- Container for Stars and paragraph -->
-                            <div class="flex flex-col mt-[-5px]">
-                                <img src="dist/asset/Stars.png" class="w-24 h-4" alt="Gambar Stars">
-                                <p class="text-base text-white leading-4 mt-4 tracking-[-0.5px]">
-                                    "<span id="typing-text">I Swear I Said Nothing...</span>"
-                                </p>
-                                <p class="text-white text-left text-xs pt-2">Lil' Nibba - <span class="text-slate-400">a random confused guy</span></p>
-                            </div>
+                    <div class="bg-slate-700 rounded-lg shadow-lg w-[250px] h-auto p-4">
+                        <img class="w-24 mx-auto" src="dist/asset/writer.png" alt="Content Writing" style="padding-top: 40px;">
+                        <h2 class="text-center px-[16px] text-white text-xl font-semibold mt-[32px]">Content Writing</h2>
+                        <p class="text-center text-xs px-2 text-slate-300 mt-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus voluptate tempora ipsam neque qui deserunt adipisci in quam maiores.</p>
+                        <!-- Learn More button -->
+                        <div class="flex justify-center mt-[30px] mb-4">
+                            <button class="flex items-center bg-transparent">
+                                <span class="text-white font-bold text-xs">Learn More</span>
+                                <img src="dist/asset/tail-right.png" alt="Arrow" class="ml-[20px]">
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Testimonials Section End -->
-        </section>
-        <!-- Service and Testimonials Section End -->
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Testimonials Section Start -->
+        <div class="mt-28 flex items-center justify-center">
+            <div class="container mx-auto px-7">
+                <div class="flex justify-center">
+                    <div class="flex items-start"> 
+                        <!-- Image Confused -->
+                        <img src="dist/asset/confused.jpg" class="w-20 h-20 rounded-full mr-[18px]" alt="Gambar Confused">
+                        <!-- Container for Stars and paragraph -->
+                        <div class="flex flex-col mt-[-5px]">
+                            <img src="dist/asset/Stars.png" class="w-24 h-4" alt="Gambar Stars">
+                            <p class="text-base text-white leading-4 mt-4 tracking-[-0.5px]">
+                                "<span id="typing-text">I Swear I Said Nothing...</span>"
+                            </p>
+                            <p class="text-white text-left text-xs pt-2">Lil' Nibba - <span class="text-slate-400">a random confused guy</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonials Section End -->
+    </section>
+    <!-- Service and Testimonials Section End -->
 
         <!-- Section Choose Us -->
         <section class="bg-slate-700 pb-[111px]">

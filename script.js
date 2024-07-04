@@ -1,35 +1,35 @@
-// Inisialisasi Swiper
-var swiper = new Swiper('.swiper-container', {
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
+        // Inisialisasi Swiper
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
 
-function updatePaginationPosition() {
-  const swiperContainer = document.querySelector('.swiper-container');
-  const swiperSlides = document.querySelectorAll('.swiper-slide');
-  const swiperPagination = document.querySelector('.swiper-pagination');
-  let maxHeight = 0;
+        function updatePaginationPosition() {
+            const swiperContainer = document.querySelector('.swiper-container');
+            const swiperSlides = document.querySelectorAll('.swiper-slide');
+            const swiperPagination = document.querySelector('.swiper-pagination');
+            let maxHeight = 0;
 
-  swiperSlides.forEach(slide => {
-    const slideHeight = slide.querySelector('div').offsetHeight;
-    if (slideHeight > maxHeight) {
-      maxHeight = slideHeight;
-    }
-  });
+            swiperSlides.forEach(slide => {
+                const slideHeight = slide.querySelector('div').offsetHeight;
+                if (slideHeight > maxHeight) {
+                    maxHeight = slideHeight;
+                }
+            });
 
-  swiperPagination.style.top = `${maxHeight + 20}px`;
-}
+            swiperPagination.style.top = `${maxHeight + 20}px`;
+        }
 
-window.addEventListener('resize', updatePaginationPosition);
-window.addEventListener('load', updatePaginationPosition);
-updatePaginationPosition();
+        window.addEventListener('resize', updatePaginationPosition);
+        window.addEventListener('load', updatePaginationPosition);
+        updatePaginationPosition();
 
 
 // Efek Mengetik
