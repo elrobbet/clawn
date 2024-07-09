@@ -77,33 +77,38 @@ toggleSwiper();
 
 
         
+// Zoom
+function handleZoom() {
+  const groups = document.querySelectorAll('.group');
+  const mediaQuery = window.matchMedia('(max-width: 640px)');
 
-  // Zoom
-  function handleZoom() {
-    const groups = document.querySelectorAll('.group');
-    const mediaQuery = window.matchMedia('(max-width: 640px)');
-
+  if (mediaQuery.matches) {
     groups.forEach(group => {
       const img = group.querySelector('img');
       const src = img.src;
 
-      if (mediaQuery.matches) {
-        group.addEventListener('click', () => {
-          const modal = document.createElement('div');
-          modal.classList.add('modal-overlay');
-          modal.innerHTML = `
-            <div class="relative">
-              <img src="${src}">
-              <button class="close-button" onclick="this.parentElement.parentElement.remove()">×</button>
-            </div>
-          `;
-          document.body.appendChild(modal);
-        });
-      } else {
-        group.removeEventListener('click', () => {});
-      }
+      const showModal = () => {
+        const modal = document.createElement('div');
+        modal.classList.add('modal-overlay');
+        modal.innerHTML = `
+          <div class="relative">
+            <img src="${src}">
+            <button class="close-button" onclick="document.body.removeChild(this.closest('.modal-overlay'))">×</button>
+          </div>
+        `;
+        document.body.appendChild(modal);
+      };
+
+      group.addEventListener('click', showModal);
+    });
+  } else {
+    groups.forEach(group => {
+      const cloneGroup = group.cloneNode(true);
+      group.parentNode.replaceChild(cloneGroup, group);
     });
   }
+}
 
-  window.addEventListener('resize', handleZoom);
-  window.addEventListener('DOMContentLoaded', handleZoom);
+window.addEventListener('resize', handleZoom);
+window.addEventListener('DOMContentLoaded', handleZoom);
+
