@@ -1,80 +1,109 @@
-        // Inisialisasi Swiper
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+// Swiper initialization
+var swiper;
 
-        function updatePaginationPosition() {
-            const swiperContainer = document.querySelector('.swiper-container');
-            const swiperSlides = document.querySelectorAll('.swiper-slide');
-            const swiperPagination = document.querySelector('.swiper-pagination');
-            let maxHeight = 0;
-
-            swiperSlides.forEach(slide => {
-                const slideHeight = slide.querySelector('div').offsetHeight;
-                if (slideHeight > maxHeight) {
-                    maxHeight = slideHeight;
-                }
-            });
-
-            swiperPagination.style.top = `${maxHeight + 20}px`;
-        }
-
-        window.addEventListener('resize', updatePaginationPosition);
-        window.addEventListener('load', updatePaginationPosition);
-        updatePaginationPosition();
-
-
-// Efek Mengetik
-function typeEffect(element, speed) {
-    var text = element.getAttribute('data-text');
-    element.innerHTML = "";
-    
-    var i = 0;
-    function type() {
-        if (i < text.length) {
-            element.append(text.charAt(i));
-            i++;
-            setTimeout(type, speed);
-        } else {
-            setTimeout(function() {
-                element.innerHTML = "";
-                i = 0;
-                type();
-            }, 2000); // Tunggu 2 detik sebelum mengulang
-        }
-    }
-    
-    type();
+function initializeSwiper() {
+    swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+    });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var typingText = document.getElementById('typing-text');
-    typingText.setAttribute('data-text', typingText.innerHTML); // Simpan teks asli
-    typeEffect(typingText, 100);
+function toggleSwiper() {
+    const swiperContainer = document.querySelector('.swiper-container');
+    if (window.innerWidth >= 768) {
+        if (swiper) {
+            swiper.destroy(true, true);
+            swiper = null;
+        }
+        swiperContainer.classList.add('hidden');
+    } else {
+        if (!swiper) {
+            initializeSwiper();
+        }
+        swiperContainer.classList.remove('hidden');
+    }
+}
+
+window.addEventListener('resize', () => {
+    toggleSwiper();
 });
 
-// zoom
-      document.querySelectorAll('.group').forEach(group => {
+window.addEventListener('load', () => {
+    toggleSwiper();
+});
+
+toggleSwiper();
+
+        
+        
+
+        // Efek Mengetik
+        function typeEffect(element, speed) {
+            var text = element.getAttribute('data-text');
+            element.innerHTML = "";
+
+            var i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.append(text.charAt(i));
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    setTimeout(function() {
+                        element.innerHTML = "";
+                        i = 0;
+                        type();
+                    }, 2000); // Tunggu 2 detik sebelum mengulang
+                }
+            }
+
+            type();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var typingText = document.getElementById('typing-text');
+            typingText.setAttribute('data-text', typingText.innerHTML); // Simpan teks asli
+            typeEffect(typingText, 100);
+        });
+
+
+        
+
+  // Zoom
+  function handleZoom() {
+    const groups = document.querySelectorAll('.group');
+    const mediaQuery = window.matchMedia('(max-width: 640px)');
+
+    groups.forEach(group => {
+      const img = group.querySelector('img');
+      const src = img.src;
+
+      if (mediaQuery.matches) {
         group.addEventListener('click', () => {
-          const img = group.querySelector('img');
-          const src = img.src;
           const modal = document.createElement('div');
-          modal.classList.add('fixed', 'inset-0', 'bg-black', 'bg-opacity-75', 'flex', 'items-center', 'justify-center', 'z-50');
+          modal.classList.add('modal-overlay');
           modal.innerHTML = `
             <div class="relative">
-              <img src="${src}" class="max-w-full max-h-full">
-              <button class="absolute top-0 right-0 mt-[-50px] mr-4 text-white text-2xl" onclick="this.parentElement.parentElement.remove()">×</button>
+              <img src="${src}">
+              <button class="close-button" onclick="this.parentElement.parentElement.remove()">×</button>
             </div>
           `;
           document.body.appendChild(modal);
         });
-      });
+      } else {
+        group.removeEventListener('click', () => {});
+      }
+    });
+  }
 
+  window.addEventListener('resize', handleZoom);
+  window.addEventListener('DOMContentLoaded', handleZoom);
