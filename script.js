@@ -82,33 +82,40 @@ function handleZoom() {
   const groups = document.querySelectorAll('.group');
   const mediaQuery = window.matchMedia('(max-width: 640px)');
 
-  if (mediaQuery.matches) {
-    groups.forEach(group => {
-      const img = group.querySelector('img');
-      const src = img.src;
+  // Remove existing event listeners to prevent duplication
+  groups.forEach(group => {
+    const newGroup = group.cloneNode(true);
+    group.parentNode.replaceChild(newGroup, group);
+  });
 
-      const showModal = () => {
+  // Add event listeners based on media query
+  const updatedGroups = document.querySelectorAll('.group');
+  updatedGroups.forEach(group => {
+    const img = group.querySelector('img');
+    const src = img.src;
+
+    if (mediaQuery.matches) {
+      group.addEventListener('click', () => {
         const modal = document.createElement('div');
         modal.classList.add('modal-overlay');
         modal.innerHTML = `
           <div class="relative">
             <img src="${src}">
-            <button class="close-button" onclick="document.body.removeChild(this.closest('.modal-overlay'))">×</button>
           </div>
         `;
-        document.body.appendChild(modal);
-      };
 
-      group.addEventListener('click', showModal);
-    });
-  } else {
-    groups.forEach(group => {
-      const cloneGroup = group.cloneNode(true);
-      group.parentNode.replaceChild(cloneGroup, group);
-    });
-  }
+        // Close modal on click anywhere
+        modal.addEventListener('click', () => {
+          document.body.removeChild(modal);
+        });
+
+        document.body.appendChild(modal);
+      });
+    }
+  });
 }
 
 window.addEventListener('resize', handleZoom);
 window.addEventListener('DOMContentLoaded', handleZoom);
+
 
